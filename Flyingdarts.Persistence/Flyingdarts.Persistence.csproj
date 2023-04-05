@@ -31,6 +31,16 @@
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</Content>
+		<Content Include="README.md">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</Content>
+		<Content Include="LICENSE.md">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</Content>
 	</ItemGroup>
 
 </Project>
