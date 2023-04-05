@@ -13,7 +13,6 @@
 		<Description>A NuGet package with persistence models</Description>
 		<PackageProjectUrl>https://github.com/flyingdarts/Flyingdarts.Persistence</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/flyingdarts/Flyingdarts.Persistence.git</RepositoryUrl>
-		<PackageLicenseExpression>GNU AFFERO GENERAL PUBLIC LICENSE</PackageLicenseExpression>
 		<LicenseFile>LICENSE.md</LicenseFile>
 		<PackageTags>Flyingdarts Persistence DynamoDb</PackageTags>
 		<PackageIcon>icon.png</PackageIcon>
