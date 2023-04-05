@@ -24,4 +24,4 @@ jobs:
         
       - name: Publish to NuGet.org
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: dotnet nuget push "$(echo $GITHUB_REPOSITORY)/bin/Release/$(echo $GITHUB_REPOSITORY).*.nupkg" -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
+        run: dotnet nuget push "Flyingdarts.Persistence/bin/Release/Flyingdarts.Persistence.*.nupkg" -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
