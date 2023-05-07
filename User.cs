@@ -11,23 +11,23 @@
         [DynamoDBLocalSecondaryIndexRangeKey("LSI1")]
         public string LSI1 { get; set; }
 
-        public string CognitoUserId { get; set; }
+        public long UserId { get; set; }
         public DateTime CreatedAt { get; set; }
-        public string SocialLoginProviderId { get; set; }
+        public string CognitoUserId { get; set; }
         public UserProfile Profile { get; set; }
 
         public User()
         {
             CreatedAt = DateTime.UtcNow;
+            UserId = CreatedAt.Ticks;
             PrimaryKey = Constants.User;
         }
 
-        public static User Create(string cognitoUserId, string socialLoginProviderId, UserProfile userProfile)
+        public static User Create(string cognitoUserId, UserProfile userProfile)
         {
             return new User()
             {
                 CognitoUserId = cognitoUserId,
-                SocialLoginProviderId = socialLoginProviderId,
                 Profile = userProfile
             };
         }
