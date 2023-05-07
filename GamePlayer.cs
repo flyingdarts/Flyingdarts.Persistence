@@ -1,5 +1,5 @@
 namespace Flyingdarts.Persistence;
-[DynamoDBTable("ApplicationTable")]
+[DynamoDBTable("Flyingdarts-Application-Table")]
 public class GamePlayer : IPrimaryKeyItem, ISortKeyItem, IAlternativeSortKeyItem
 {
     [DynamoDBHashKey("PK")]
