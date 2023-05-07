@@ -26,11 +26,14 @@
 
         public static User Create(string cognitoUserId, UserProfile userProfile)
         {
-            return new User()
+            var user = new User()
             {
                 CognitoUserId = cognitoUserId,
                 Profile = userProfile
             };
+            user.SortKey = $"{user.CreatedAt}#{userProfile.Country}";
+
+            return user;
         }
     }
 
