@@ -1,5 +1,6 @@
 ﻿namespace Flyingdarts.Persistence
 {
+    [DynamoDBTable("ApplicationTable")]
     public class User : IPrimaryKeyItem, ISortKeyItem, IAlternativeSortKeyItem
     {
         [DynamoDBHashKey("PK")]
