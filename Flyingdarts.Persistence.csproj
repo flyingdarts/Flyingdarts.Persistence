@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
@@ -22,7 +22,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.103" />
+		<PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.103.3" />
 		<PackageReference Include="Flyingdarts.Shared" Version="1.0.2" />
 		<PackageReference Include="Microsoft.Extensions.Options" Version="8.0.0-preview.3.23174.8" />
 	</ItemGroup>
