@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>Flyingdarts.Persistence</Title>
-    <VersionPrefix>1.0.2.12</VersionPrefix>
+    <VersionPrefix>1.0.2.13</VersionPrefix>
     <Version>$(VersionPrefix)</Version>
     <PackageId>Flyingdarts.Persistence</PackageId>
     <Authors>Flyingdarts</Authors>
