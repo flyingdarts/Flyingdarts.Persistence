@@ -19,7 +19,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.103.4" />
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.103.5" />
     <PackageReference Include="Flyingdarts.Shared" Version="1.0.2.3" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.0-preview.4.23259.5" />
   </ItemGroup>
