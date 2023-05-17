@@ -34,7 +34,7 @@ jobs:
       - name: Extract Git tag
         id: extract_tag
         run: |
-          TAG=$(git describe --tags --exact-match ${{ github.sha }})
+          TAG=$(git describe --tags)
           echo "TAG=${TAG}" >> $GITHUB_ENV
 
       - name: Discord Webhook Action
