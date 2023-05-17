@@ -13,7 +13,6 @@ public class Game : IPrimaryKeyItem, ISortKeyItem, IAlternativeSortKeyItem
 
 
     public long GameId { get; set; }
-    public string RoomId { get; set; }
     public GameType Type { get; set; }
     public GameStatus Status { get; set; }
     public int PlayerCount { get; set; }
@@ -31,14 +30,13 @@ public class Game : IPrimaryKeyItem, ISortKeyItem, IAlternativeSortKeyItem
         LSI1 = $"{Status}#{GameId}";
     }
 
-    public static Game Create(int playerCount, X01GameSettings settings, string roomId)
+    public static Game Create(int playerCount, X01GameSettings settings)
     {
         return new Game()
         {
             Type = GameType.X01,
             PlayerCount = playerCount,
             X01 = settings,
-            RoomId = roomId
         };
     }
 }

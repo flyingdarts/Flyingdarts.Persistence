@@ -30,12 +30,19 @@ jobs:
         run: |
           REPO_NAME=$GITHUB_REPOSITORY
           echo "REPO_NAME_WITHOUT_DASHES=$(echo $REPO_NAME | sed 's/flyingdarts\///')" >> $GITHUB_ENV  
+
+      - name: Extract Git tag
+        id: extract_tag
+        run: |
+          TAG=$(git describe --tags --exact-match ${{ github.sha }})
+          echo "TAG=${TAG}" >> $GITHUB_ENV
+
       - name: Discord Webhook Action
         uses: tsickert/discord-webhook@v5.3.0
         with:
           webhook-url: ${{ secrets.DISCORD_DEVELOPMENT_PACKAGES_CHANNEL_WEBHOOK }}
           embed-title: ${{ env.REPO_NAME_WITHOUT_DASHES }}
           embed-description: ${{ github.event.head_commit.message }}
-          embed-footer-text: ${{ github.ref_name }}
+          embed-footer-text: ${{ github.ref_name }} - ${{ env.TAG }}
           embed-timestamp: ${{ github.event.head_commit.timestamp }}
-          embed-author-name: ${{ github.event.head_commit.author.name }}   
+          embed-author-name: ${{ github.event.head_commit.author.name }}
