@@ -31,7 +31,7 @@
                 CognitoUserId = cognitoUserId,
                 Profile = userProfile
             };
-            user.SortKey = cognitoUserId;
+            user.SortKey = user.UserId.ToString();
             user.LSI1 = $"{userProfile.Country}#{user.CreatedAt}";
 
             return user;
