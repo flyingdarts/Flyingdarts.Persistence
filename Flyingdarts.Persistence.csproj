@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>Flyingdarts.Persistence</Title>
-    <VersionPrefix>1.1.0.5</VersionPrefix>
+    <VersionPrefix>1.1.1.0</VersionPrefix>
     <Version>$(VersionPrefix)</Version>
     <PackageId>Flyingdarts.Persistence</PackageId>
     <Authors>Flyingdarts</Authors>
@@ -15,11 +15,11 @@
     <LicenseFile>LICENSE.md</LicenseFile>
     <PackageTags>Flyingdarts Persistence DynamoDb</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
-    <PackageReleaseNotes>Public release</PackageReleaseNotes>
+    <PackageReleaseNotes>PlayerId is now behaves like GameId, it is == the CreatedAt = DateTime.UtcNow.Ticks</PackageReleaseNotes>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.103.9" />
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.103.10" />
     <PackageReference Include="Flyingdarts.Shared" Version="1.0.2.8" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.0-preview.4.23259.5" />
   </ItemGroup>
