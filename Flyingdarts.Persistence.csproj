@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>Flyingdarts.Persistence</Title>
-    <VersionPrefix>1.1.0.4</VersionPrefix>
+    <VersionPrefix>1.1.0.5</VersionPrefix>
     <Version>$(VersionPrefix)</Version>
     <PackageId>Flyingdarts.Persistence</PackageId>
     <Authors>Flyingdarts</Authors>
@@ -20,7 +20,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.103.9" />
-    <PackageReference Include="Flyingdarts.Shared" Version="1.0.2.7" />
+    <PackageReference Include="Flyingdarts.Shared" Version="1.0.2.8" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.0-preview.4.23259.5" />
   </ItemGroup>
   <ItemGroup>
