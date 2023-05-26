@@ -12,7 +12,7 @@
         [DynamoDBLocalSecondaryIndexRangeKey("LSI1")]
         public string LSI1 { get; set; }
 
-        public long UserId { get; set; }
+        public string UserId { get; set; }
         public DateTime CreatedAt { get; set; }
         public string CognitoUserId { get; set; }
         public string CognitoUserName { get; set; }
@@ -21,7 +21,7 @@
         public User()
         {
             CreatedAt = DateTime.UtcNow;
-            UserId = CreatedAt.Ticks;
+            UserId = CreatedAt.Ticks.ToString();
             PrimaryKey = Constants.User;
         }
 
