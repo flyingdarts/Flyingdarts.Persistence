@@ -15,6 +15,7 @@
         public long UserId { get; set; }
         public DateTime CreatedAt { get; set; }
         public string CognitoUserId { get; set; }
+        public string CognitoUserName { get; set; }
         public UserProfile Profile { get; set; }
 
         public User()
@@ -24,11 +25,12 @@
             PrimaryKey = Constants.User;
         }
 
-        public static User Create(string cognitoUserId, UserProfile userProfile)
+        public static User Create(string cognitoUserId, string cognitoUserName, UserProfile userProfile)
         {
             var user = new User()
             {
                 CognitoUserId = cognitoUserId,
+                CognitoUserName = cognitoUserName,
                 Profile = userProfile
             };
             user.SortKey = user.UserId.ToString();
