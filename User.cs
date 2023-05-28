@@ -11,8 +11,8 @@
 
         [DynamoDBLocalSecondaryIndexRangeKey("LSI1")]
         public string LSI1 { get; set; }
-
         public string UserId { get; set; }
+        public string ConnectionId { get; set; }
         public DateTime CreatedAt { get; set; }
         public string CognitoUserId { get; set; }
         public string CognitoUserName { get; set; }
@@ -25,12 +25,13 @@
             PrimaryKey = Constants.User;
         }
 
-        public static User Create(string cognitoUserId, string cognitoUserName, UserProfile userProfile)
+        public static User Create(string cognitoUserId, string cognitoUserName, string connectionId, UserProfile userProfile)
         {
             var user = new User()
             {
                 CognitoUserId = cognitoUserId,
                 CognitoUserName = cognitoUserName,
+                ConnectionId = connectionId,
                 Profile = userProfile
             };
             user.SortKey = $"{user.UserId}#{userProfile.Country}";

@@ -11,7 +11,7 @@ public class GamePlayer : IPrimaryKeyItem, ISortKeyItem, IAlternativeSortKeyItem
     [DynamoDBLocalSecondaryIndexRangeKey("LSI1")]
     public string LSI1 { get; set; }
 
-    public long PlayerId { get; set; }
+    public string PlayerId { get; set; }
     public DateTime CreatedAt { get; set; }
     public long GameId { get; set; }
 
@@ -19,7 +19,7 @@ public class GamePlayer : IPrimaryKeyItem, ISortKeyItem, IAlternativeSortKeyItem
     {
         PrimaryKey = Constants.GamePlayer;
     }
-    public static GamePlayer Create(long gameId, long playerId)
+    public static GamePlayer Create(long gameId, string playerId)
     {
         var now = DateTime.UtcNow;
 
