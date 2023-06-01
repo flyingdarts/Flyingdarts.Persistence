@@ -37,7 +37,7 @@ public class GameDart : IPrimaryKeyItem, ISortKeyItem, IAlternativeSortKeyItem
             Score = 0,
             CreatedAt = createdAt,
             SortKey = $"{gameId}#{id}#{playerId}",
-            LSI1 = $"{Constants.GameDart}#{playerId}#{createdAt}"
+            LSI1 = $"{playerId}#{createdAt}"
         };
     }
 
@@ -54,7 +54,7 @@ public class GameDart : IPrimaryKeyItem, ISortKeyItem, IAlternativeSortKeyItem
             Score = score,
             CreatedAt = createdAt,
             SortKey = $"{gameId}#{id}#{playerId}",
-            LSI1 = $"{Constants.GameDart}#{playerId}#{createdAt}"
+            LSI1 = $"{playerId}#{createdAt}"
         };
     }
 }
