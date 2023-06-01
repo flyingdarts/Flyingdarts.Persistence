@@ -18,30 +18,20 @@ public class GameDart : IPrimaryKeyItem, ISortKeyItem, IAlternativeSortKeyItem
     public int Score { get; set; }
     public int GameScore { get; set; }
     public DateTime CreatedAt { get; set; }
-
+    public int Leg { get; set; }
+    public int Set { get; set; }
     public GameDart()
     {
         PrimaryKey = Constants.GameDart;
     }
 
-    public static GameDart CreateInitial(long gameId, string playerId, int gameScore)
-    {
-        var id = Guid.NewGuid();
-        var createdAt = DateTime.UtcNow;
-        return new GameDart()
-        {
-            Id = id,
-            GameId = gameId,
-            PlayerId = playerId,
-            GameScore = gameScore,
-            Score = 0,
-            CreatedAt = createdAt,
-            SortKey = $"{gameId}#{id}#{playerId}",
-            LSI1 = $"{playerId}#{createdAt}"
-        };
-    }
-
-    public static GameDart Create(long gameId, string playerId, int score, int gameScore)
+    public static GameDart Create(
+        long gameId,
+        string playerId,
+        int score,
+        int gameScore,
+        int set,
+        int leg)
     {
         var id = Guid.NewGuid();
         var createdAt = DateTime.UtcNow;
@@ -52,6 +42,8 @@ public class GameDart : IPrimaryKeyItem, ISortKeyItem, IAlternativeSortKeyItem
             PlayerId = playerId,
             GameScore = gameScore,
             Score = score,
+            Set = set,
+            Leg = leg,
             CreatedAt = createdAt,
             SortKey = $"{gameId}#{id}#{playerId}",
             LSI1 = $"{playerId}#{createdAt}"
